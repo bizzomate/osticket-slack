@@ -18,18 +18,17 @@ class SlackPlugin extends Plugin {
 						'attachments' =>
 							array (
 								array (	
-									'pretext' => "New Ticket <" . $ost->getConfig()->getUrl() . "scp/tickets.php?id=" 
-												. $ticket->getId() . "|#" . $ticket->getNumber() . "> created",
-									'fallback' => "New Ticket <" . $ost->getConfig()->getUrl() . "scp/tickets.php?id=" 
-												. $ticket->getId() . "|#" . $ticket->getNumber() . "> created",
+									'pretext' => "Nieuw Ticket <" . $ost->getConfig()->getUrl() . "scp/tickets.php?id=" 
+												. $ticket->getId() . "|#" . $ticket->getNumber() . "> aangemaakt",
+									'fallback' => "Nieuw Ticket <" . $ost->getConfig()->getUrl() . "scp/tickets.php?id=" 
+												. $ticket->getId() . "|#" . $ticket->getNumber() . "> aangemaakt",
 									'color' => "#D00000",
 									'fields' => 
 									array(
 										array (
 											'title' => $ticket->getSubject(),
-											'value' => "created by " . $ticket->getName() . "(" . $ticket->getEmail() 
-														. ") in " . $ticket->getDeptName() . "(Department) via " 
-														. $ticket->getSource(),
+											'value' => "aangemaakt door " . $ticket->getName() . "(" . $ticket->getEmail() 
+														. ")",
 											'short' => False,
 										),											
 									),
